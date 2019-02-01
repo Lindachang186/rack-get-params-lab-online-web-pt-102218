@@ -21,7 +21,7 @@ class Application
 
       search_item = req.params["q"]
 
-      if handle_search(search_item) == true
+      if @@item.include?(search_item)
         @@cart << search_item
         resp.write "added #{search_item}"
       else
