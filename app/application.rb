@@ -28,7 +28,7 @@ class Application
           resp.write "#{item}\n"
           end
     elsif req.path.match(/search/)
-      search_term = req.params["item"]
+      search_term = req.params["q"]
       resp.write handle_search(search_term)
     else
       resp.write "Path Not Found"
